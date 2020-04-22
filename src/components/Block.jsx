@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Ingredients from './Ingredients';
 import styled from 'styled-components';
 
@@ -13,18 +13,22 @@ const NameStyled = styled.h2`
     font-style:cursive;
     text-align:center;
     color: red;
-    padding:10px;
+    padding:5px;
+    font-size:1.2em;
+    text-shadow:2px 2px 1px black;
 `;
 const ImageStyled = styled.img`
+    width: 300px;
     box-shadow:5px 5px 2px black;
     border: 2px solid black; 
 `;
 
 const StyledA =styled.a`
     padding:10px;
-    color:lightgreen;
+    color:green;
     text-shadow:1px 1px 0.5 white;
-`
+`;
+
 const ButtonStyled = styled.button`
     display: flex;
     justify-content:center;
@@ -43,7 +47,12 @@ const ButtonStyled = styled.button`
     border:1.9px solid lightgrey;
 }
 `
+
+
 export default function Block({info}) {
+
+    const[visible,setVisible]= useState(false);
+
     const {label,image,url, ingredients} = info.recipe;
     return (
     <BlockStyled>
@@ -52,10 +61,10 @@ export default function Block({info}) {
         src={image}
          alt="#"/>
         <StyledA href={url} target="_blank" rel="noopener noreferrer">More info</StyledA>
-        <ButtonStyled>Ingredients</ButtonStyled>
-        <Ingredients 
+        <ButtonStyled onClick={() => setVisible(!visible)}>Ingredients</ButtonStyled>
+        {visible ? <Ingredients 
         className="ingredients"
-        ingredients={ingredients}/>
+        ingredients={ingredients}/>:null}
     </BlockStyled>
     )
 }
