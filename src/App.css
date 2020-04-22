@@ -1,38 +1,42 @@
+#root {
+  font-family: sans-serif;
+  font-weight: 900;
+  text-shadow:2px 2px 1px rgba(255, 235, 205, 0.707);
+  letter-spacing: 0.7rem;
+  font-size: 1.3em;
+  margin-top: -2vh;
+  padding: 0;
+  height: 102vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://johnrieber.files.wordpress.com/2013/09/pie-recipes-waitress-movie.jpg);
+}
+
 .App {
+  padding-top: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ingrDiv {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  flex-flow: row wrap;
+
 }
 
-.App-link {
-  color: #61dafb;
+.blocks {
+  margin: auto;
+  border:2px solid black;
+  box-shadow: 12px 12px 10px rgb(63, 58, 58);
+  margin: 1vh;
+  height: 20vh;
+  width: 30vw;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ingredients {
+  display: block;
+  border:2px solid grey;
 }

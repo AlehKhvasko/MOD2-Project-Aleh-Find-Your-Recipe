@@ -3,6 +3,8 @@ import './App.css';
 import axios from 'axios';
 import SearchForm from './components/SearchForm';
 import Button from './components/Button';
+import Block from './components/Block';
+
 
 //register on api.edamam.com and get valid recipe API
 //install and use AXIOS
@@ -35,6 +37,7 @@ const url = `https://api.edamam.com/search?q=${someData}&app_id=${APP_ID}&app_ke
 //     ;}
 // }
 
+
 const onSubmitHandler = async(event) => {
   event.preventDefault();
   const res = await axios.get(url);
@@ -49,23 +52,20 @@ const onChangeHandler = (event) => {
 }
   
 return (
-    <div className="App">
-      <h1 >My Grandma's recipe</h1>
-      <SearchForm
-       inputChange={onChangeHandler}
-       info={someData}></SearchForm>
-      <Button ClickBtn={onSubmitHandler}></Button>
-      <div>{mainRecipe.map(res =>
-      <Block
-        info={res.label}
-        info2={res.image}
-        info3={res.uri}
-        info4={res.ingredientLines}
-        info4={res.ingredientLines}
-        info5={res.calories}
-        ></Block>)}
+      <div className="App">
+          <h1 >My Grandma's recipe</h1>
+          <SearchForm
+          inputChange={onChangeHandler}
+          info={someData}></SearchForm>
+          <Button ClickBtn={onSubmitHandler}></Button>
+          <div className='ingrDiv' >{mainRecipe.map((res, index) =>
+          <Block className='blocks'
+            key={index}
+            info={res}
+            />
+          )}
+          </div>
       </div>
-    </div>
   );
 }
 
