@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
-  return (
+const APP_ID = 'a8e02ed5';
+const APP_KEY='16dd19f01ad1a5fc17a8c9206134115b';
+const url = `https://api.edamam.com/search?q=shrimp&app_id=${APP_ID}&app_key=${APP_KEY}`;  
+
+const recipeData = async() => {
+  try {
+    const data = await axios.get(url);
+    console.log(data);
+  }catch(error) {console.error()
+    ;}
+}
+
+  
+return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 onClick={recipeData} >React food app</h1>
     </div>
   );
 }
