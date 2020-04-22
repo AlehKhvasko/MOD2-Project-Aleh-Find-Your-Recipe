@@ -19,6 +19,10 @@ import Error from './components/Error'
 //Implement semantic UI
 //Try to use Redux
 //Use Router to switch between pages
+
+const KEY = process.env.REACT_APP_API_KEY;
+const ID = process.env.REACT_APP_API_ID;
+
 const Title = styled.h1`
 font-size:4em;
 display: flex;
@@ -46,9 +50,9 @@ const[someData,setSomeData] = useState('');
 const[mainRecipe,setMainRecipe] = useState([]);
 const[empty, setEmpty] = useState('')
 
-const APP_ID = 'a8e02ed5';
-const APP_KEY='16dd19f01ad1a5fc17a8c9206134115b';
-const url = `https://api.edamam.com/search?q=${someData}&app_id=${APP_ID}&app_key=${APP_KEY}`;  
+// const APP_ID = 'a8e02ed5';
+// const APP_KEY='16dd19f01ad1a5fc17a8c9206134115b';
+const url = `https://api.edamam.com/search?q=${someData}&app_id=${ID}&app_key=${KEY}`;  
 
 const onSubmitHandler = async(event) => {
   if(someData !== '') {
@@ -77,8 +81,8 @@ return (
           <Title>My Grandma's recipe</Title>
             <SearchForm
             inputChange={onChangeHandler}
-            info={someData}><Error/></SearchForm>
-            <Error error={empty}/>
+            info={someData}></SearchForm>
+            {empty ? <Error error={empty}/>:null}
           <Button ClickBtn={onSubmitHandler}></Button>
           
 

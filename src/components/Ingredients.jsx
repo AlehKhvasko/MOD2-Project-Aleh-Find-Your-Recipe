@@ -15,12 +15,19 @@ const StyledMain = styled.div`
    border:1px solid black; 
 `;
 const StyledDiv = styled.p`
-   color:lightcoral;
-   margin:5px;
+   font-size:0.9em;
+   color:black;
+   letter-spacing:normal;
+   text-transform: uppercase;
+   margin:1px;
+   padding:5px;
+   transition-delay:300ms;
+   width:100%;
 `
 const StyledP = styled.p`
    color:#76051E;
    margin:5px;
+ 
 `
 const StyledInput = styled.input`
    border:4px solid black;

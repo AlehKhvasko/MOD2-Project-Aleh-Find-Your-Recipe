@@ -8,6 +8,7 @@ const StyledError = styled.h3`
     text-decoration:none;
     font-size:1em;
     margin:10px auto;
+    text-shadow:1px 1px 1px black;
 `
 export default function Error(error) {
     return (
