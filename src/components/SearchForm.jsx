@@ -36,21 +36,27 @@ const SearchStyle = styled.div`
 
 
 const Input =  styled.input`
+
     padding: 0.5em;
-    font-size:0.7em;
+    font-size:0.9em;
     color: ${props => props.inputColor || "palevioletred"};
     background: papayawhip;
-    height: 2.5em;
-    width: 30em;
+    height: 2em;
+    width: 15em;
     border-radius: 10px;
     box-shadow:-4px -4px  2px black;
-`
+    transition: width 0.4s ease-in-out;
+
+    &:focus {
+        width: 34em;
+    }
+`;
 
 export default function SearchForm(props) {
     return (
         <div>
             <SearchStyle >
-                <Input 
+                <Input
                 type="text"
                 onChange={props.inputChange}
                 placeholder='Recipe search'
