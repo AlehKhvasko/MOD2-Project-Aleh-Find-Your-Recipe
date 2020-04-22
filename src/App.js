@@ -19,12 +19,14 @@ import styled from 'styled-components';
 //Try to use Redux
 //Use Router to switch between pages
 const Title = styled.h1`
+font-size:4em;
 padding:1vh 0;
 display: flex;
 flex-flow:column;
 align-items:center;
 justify-content:center;
 color:rgb(237, 117, 47);
+text-shadow:6px 6px 3px black;
 `;
 
 
@@ -65,7 +67,7 @@ const onChangeHandler = (event) => {
 
 return (
       <div className='App'>
-          <Title><h1>My Grandma's recipe</h1></Title>
+          <Title>My Grandma's recipe</Title>
           <SearchForm
           inputChange={onChangeHandler}
           info={someData}></SearchForm>

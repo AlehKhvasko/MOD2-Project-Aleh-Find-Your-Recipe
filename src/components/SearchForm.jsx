@@ -7,32 +7,39 @@ const SearchStyle = styled.div`
 
 &::after {
   content:'';
-  margin: -10px 1%;
+  margin: -30px 3%;
   border:2px solid black;
   background:url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/7f7c9b59749677.5a2e65b12b000.gif');
-  height:50px;
-  width:50px;
+  height:80px;
+  width:80px;
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
   border-radius:50%;
+  box-shadow:4px 4px 2px black;
 }
+
 &::before {
   content:'';
-  margin: -10px 1%;
+  margin: -30px 3%;
   border:2px solid black;
   background:url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/7f7c9b59749677.5a2e65b12b000.gif');
-  height:50px;
-  width:50px;
+  height:80px;
+  width:80px;
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
   border-radius:50%;
+  box-shadow:4px 4px 2px black;
 }
 `;
 
 
 const Input =  styled.input`
+    padding: 0.5em;
+    font-size:0.7em;
+    color: ${props => props.inputColor || "palevioletred"};
+    background: papayawhip;
     height: 2.5em;
     width: 30em;
     border-radius: 10px;
