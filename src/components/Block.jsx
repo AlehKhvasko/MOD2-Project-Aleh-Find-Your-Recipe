@@ -13,7 +13,9 @@ export default function Block({info}) {
          alt="#"/>
         <a href={url} target="_blank" rel="noopener noreferrer">Link</a>
         <button>Ingredients</button>
-        <Ingredients ingredients={ingredients}/>
+        <Ingredients 
+        className="ingredients"
+        ingredients={ingredients}/>
     </div>
     )
 }
