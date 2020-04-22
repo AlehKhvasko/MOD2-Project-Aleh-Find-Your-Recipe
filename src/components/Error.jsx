@@ -1,9 +1,18 @@
 import React from 'react'
+import styled from 'styled-components';
 
-export default function Error(props) {
+const StyledError = styled.h3`
+    display: flex;
+    justify-content:center;
+    color:red;
+    text-decoration:none;
+    font-size:1em;
+    margin:0 auto;
+`
+export default function Error(error) {
     return (
         <div>
-            <h4>{props.empty}</h4>
+            <StyledError>{error.error}</StyledError>
         </div>
     )
 }

@@ -22,14 +22,20 @@ const StyledP = styled.p`
    color:#76051E;
    margin:5px;
 `
-
+const StyledInput = styled.input`
+   border:4px solid black;
+   transform : scale(1.5);
+   margin-top:10px;
+`
 
 export default function Ingredients({ingredients}) {
     return ingredients.map((info,index) => {
        return ( 
        <StyledMain
          key={index}>
-            <StyledP>{index}.</StyledP><StyledDiv>{info.text}</StyledDiv> 
+            <StyledInput type="checkbox"></StyledInput>
+            <StyledP>{index}.</StyledP>
+            <StyledDiv>{info.text}</StyledDiv> 
        </StyledMain>
         )
 });

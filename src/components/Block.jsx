@@ -21,7 +21,13 @@ const NameStyled = styled.h2`
 const ImageStyled = styled.img`
     width: 300px;
     box-shadow:5px 5px 2px black;
-    border: 2px solid black; 
+    border: 2px solid black;
+    transition-delay: 200ms; 
+
+    &:hover {
+        width:80%;
+        margin-top:-10%;
+    }
 `;
 
 const StyledA =styled.a`
