@@ -10,8 +10,9 @@ const StyledMain = styled.div`
    background-size:cover;
    color:#3D4954;
    font-size:1.2em;
-   padding-top:15px;
-   text-align:left; 
+   margin-top:1px;
+   text-align:left;
+   border:1px solid black; 
 `;
 const StyledDiv = styled.p`
    color:lightcoral;

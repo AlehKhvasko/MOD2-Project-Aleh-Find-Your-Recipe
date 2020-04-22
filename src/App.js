@@ -5,6 +5,7 @@ import SearchForm from './components/SearchForm';
 import Button from './components/Button';
 import Block from './components/Block';
 import styled from 'styled-components';
+import Error from './components/Error'
 
 
 //register on api.edamam.com and get valid recipe API
@@ -20,7 +21,6 @@ import styled from 'styled-components';
 //Use Router to switch between pages
 const Title = styled.h1`
 font-size:4em;
-padding:1vh 0;
 display: flex;
 flex-flow:column;
 align-items:center;
@@ -44,17 +44,23 @@ function App() {
 
 const[someData,setSomeData] = useState('');
 const[mainRecipe,setMainRecipe] = useState([]);
+const[empty, setEmpty] = useState('')
 
 const APP_ID = 'a8e02ed5';
 const APP_KEY='16dd19f01ad1a5fc17a8c9206134115b';
 const url = `https://api.edamam.com/search?q=${someData}&app_id=${APP_ID}&app_key=${APP_KEY}`;  
 
 const onSubmitHandler = async(event) => {
-  event.preventDefault();
-  const res = await axios.get(url);
-  console.log(res);
-  setMainRecipe(res.data.hits)
-  setSomeData('');
+  if(someData !== '') {
+    event.preventDefault();
+    const res = await axios.get(url);
+    console.log(res);
+    setMainRecipe(res.data.hits)
+    setSomeData('');
+  }else{
+    setEmpty('Search bar is empty');
+  }
+
 }
 
 const onChangeHandler = (event) => {
@@ -67,11 +73,15 @@ const onChangeHandler = (event) => {
 
 return (
       <div className='App'>
+        <div className='App-header'>
           <Title>My Grandma's recipe</Title>
-          <SearchForm
-          inputChange={onChangeHandler}
-          info={someData}></SearchForm>
+            <SearchForm
+            inputChange={onChangeHandler}
+            info={someData}><Error/></SearchForm>
+            <Error error={empty}/>
           <Button ClickBtn={onSubmitHandler}></Button>
+          
+
           <Grid >{mainRecipe.map((res, index) =>
               <Block 
               key={index}
@@ -80,6 +90,7 @@ return (
           )}
           </Grid>
       </div >
+      </div>
   );
 }
 
