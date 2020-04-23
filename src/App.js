@@ -38,7 +38,8 @@ text-shadow:6px 6px 3px black;
 const Grid = styled.div`
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  grid-template-rows:repeat(2,1fr);
+  grid-template-rows:repeat(3,1fr);
+  grid-gap:1% 1%;
   justify-content:space-evenly;
   align-items:flex-start;
   text-align:center;
@@ -78,22 +79,22 @@ const onChangeHandler = (event) => {
 return (
       <div className='App'>
         <div className='App-header'>
-          <Title>My Grandma's recipe</Title>
-            <SearchForm
-            inputChange={onChangeHandler}
-            info={someData}></SearchForm>
-            {empty ? <Error error={empty}/>:null}
-          <Button ClickBtn={onSubmitHandler}></Button>
-          
+            <Title>My Grandma's recipe</Title>
+              <SearchForm
+              inputChange={onChangeHandler}
+              info={someData}></SearchForm>
+              {empty ? <Error error={empty}/>:null}
+            <Button ClickBtn={onSubmitHandler}></Button>
+            
 
-          <Grid >{mainRecipe.map((res, index) =>
-              <Block 
-              key={index}
-              info={res}
-              />
-          )}
-          </Grid>
-      </div >
+            <Grid >{mainRecipe.map((res, index) =>
+                <Block 
+                key={index}
+                info={res}
+                />
+            )}
+            </Grid>
+        </div >
       </div>
   );
 }

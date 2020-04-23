@@ -4,29 +4,38 @@ import styled from 'styled-components';
 
 const BlockStyled = styled.div`
     display: flex;
+    margin-top:20px;
     flex-flow:column wrap;
     align-items:center;
     justify-content:space-evenly;
+    background-color:rgb(171, 155, 154, 0.3);
+    border-radius:50px;
+    box-shadow:6px 6px 2px black;
+    padding-bottom:30px;
 `
 const NameStyled = styled.h2`
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style:cursive;
     text-align:center;
-    color: red;
+    color: #b8d1d4;
+    font-style: italic;
     padding:5px;
-    font-size:1.8em;
+    font-size:1.4em;
     text-shadow:2px 2px 1px black;
     width:300px;
+    
 `;
 const ImageStyled = styled.img`
     width: 300px;
     box-shadow:5px 5px 2px black;
     border: 2px solid black;
-    transition-delay: 200ms; 
+    transition-delay: 400ms; 
 
     &:hover {
-        width:80%;
-        margin-top:-10%;
+        border:4px solid rgb(207, 32, 21);
+        transform:scale(1.08);
+        margin:-3px;
+        
     }
 `;
 
@@ -66,19 +75,25 @@ const ButtonStyled = styled.button`
     border:1.9px solid lightgrey;
 }
 `
-
+const StyledCal = styled.div`   
+    padding:15px;
+    text-shadow:2px 2px 1px black;
+    color: #b8d1d4;
+    font-style: italic;
+`
 
 export default function Block({info}) {
 
     const[visible,setVisible]= useState(false);
 
-    const {label,image,url, ingredients} = info.recipe;
+    const {label,image,url, ingredients,calories} = info.recipe;
     return (
     <BlockStyled>
-        <NameStyled>{label}</NameStyled>
+        <NameStyled>{label.length < 15 ? label : label.substring(0,15)+ '...'}</NameStyled>
         <ImageStyled 
         src={image}
          alt="#"/>
+         <StyledCal>{Math.floor(calories)} Cal.</StyledCal>
         <StyledA href={url} target="_blank" rel="noopener noreferrer">See full recipe &rarr;</StyledA>
         <ButtonStyled onClick={() => setVisible(!visible)}>Ingredients</ButtonStyled>
         {visible ? <Ingredients 
