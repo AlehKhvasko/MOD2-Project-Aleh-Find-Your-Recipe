@@ -51,8 +51,6 @@ const[someData,setSomeData] = useState('');
 const[mainRecipe,setMainRecipe] = useState([]);
 const[empty, setEmpty] = useState('')
 
-// const APP_ID = 'a8e02ed5';
-// const APP_KEY='16dd19f01ad1a5fc17a8c9206134115b';
 const url = `https://api.edamam.com/search?q=${someData}&app_id=${ID}&app_key=${KEY}`;  
 
 const onSubmitHandler = async(event) => {
