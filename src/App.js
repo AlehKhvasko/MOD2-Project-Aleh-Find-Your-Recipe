@@ -5,7 +5,8 @@ import SearchForm from './components/SearchForm';
 import Button from './components/Button';
 import Block from './components/Block';
 import styled from 'styled-components';
-import Error from './components/Error'
+import Error from './components/Error';
+import {Link} from 'react-router-dom';
 
 
 //register on api.edamam.com and get valid recipe API
@@ -72,11 +73,22 @@ const onChangeHandler = (event) => {
 }
  
 
-
+const StyledHeader = styled.div`
+    display: flex;
+    justify-content:space-around;
+    margin:10px 150px;
+    font-size:2rem;
+    text-decoration:none;
+    color:red;
+`
 
 return (
       <div className='App'>
         <div className='App-header'>
+        <StyledHeader>
+            <Link to="/">Home</Link>
+            <Link to="/top">Top 5 recipes</Link>
+        </StyledHeader>
             <Title>My Grandma's recipe</Title>
               <SearchForm
               inputChange={onChangeHandler}

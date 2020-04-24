@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('https://johnrieber.files.wordpress.com/2013/09/pie-recipes-waitress-movie.jpg');
+  list-style-type:none;
 }
 
 .App-header {

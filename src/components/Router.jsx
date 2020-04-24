@@ -1,17 +1,18 @@
-import React from 'react'
+import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
+import Top from './Top';
+import App from '../App';
 
 
 
 export default function Router() {
-    return (
-        <div>
+            return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path='/' component={App}/>
-                    <Route path='/recipe:id' component={Top10} />
+                    <Route exact path='/' component={App}></Route>
+                    <Route path='/top' component={Top} />
                 </Switch>
             </BrowserRouter>
-        </div>
-    )
+);
 }
