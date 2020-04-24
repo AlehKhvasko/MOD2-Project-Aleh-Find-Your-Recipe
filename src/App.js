@@ -75,9 +75,18 @@ const onChangeHandler = (event) => {
 const StyledHeader = styled.div`
     display: flex;
     justify-content:space-around;
-    margin:10px 150px;
+    align-items:center;
     font-size:2rem;
     text-decoration:none;
+    text-align:center;
+    font-size:1.5em;
+    color:white;
+    text-shadow:2px 2px 1px black;
+    border:4px solid black;
+    background-image:url('https://i.pinimg.com/736x/81/4d/e8/814de875dcd72f4398fb42965fd11a83.jpg'); 
+    height:10vh;
+    width:100vw;
+    margin:0;
 `
 
 return (
