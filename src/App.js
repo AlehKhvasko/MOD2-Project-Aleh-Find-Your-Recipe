@@ -88,6 +88,17 @@ const StyledHeader = styled.div`
     width:100vw;
     margin:0;
 `
+const StyledTitle = styled.div`
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-color:rgba(0,0,0,0.4);
+  border:2px solid black;
+  margin:40px auto 100px auto;
+  width:40%;
+  height:10vh;
+  box-shadow:10px 10px 2px black;
+`
 
 return (
       <div className='App'>
@@ -97,13 +108,13 @@ return (
             <Link to="/motivation"> Why to cook?</Link>
         </StyledHeader>
         <div className='App-header'>
-            <Title>Grandma's Recipe</Title>
-              <SearchForm
+          <StyledTitle><Title>Grandma's Recipe</Title> </StyledTitle>
+          <StyledTitle> <SearchForm
               inputChange={onChangeHandler}
               info={someData}></SearchForm>
               {empty ? <Error error={empty}/>:null}
+           </StyledTitle>
               <Button ClickBtn={onSubmitHandler}></Button>
-
             <Grid >{mainRecipe.map((res, index) =>
                 <Block 
                 key={index}
