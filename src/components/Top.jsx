@@ -30,6 +30,8 @@ const StyledHeader = styled.div`
     font-size:1.5em;
     color:white;
     text-shadow:2px 2px 1px black;
+    border:4px solid black;
+    background-image:url('https://i.pinimg.com/736x/81/4d/e8/814de875dcd72f4398fb42965fd11a83.jpg');  
 `;
 
 const ButtonStyled = styled.button`
@@ -60,13 +62,13 @@ export default function Top() {
     return (
        <StyledMain> 
         <StyledHeader>
-        <ButtonStyled><Link to="/">&rarr; Home</Link></ButtonStyled>
-        <ButtonStyled><Link to="/motivation">&rarr; Motivation</Link></ButtonStyled>
+        <ButtonStyled><Link to="/"> Home</Link></ButtonStyled>
+        <ButtonStyled><Link to="/motivation"> Why to Cook?</Link></ButtonStyled>
             <TopHeader
             header={'Top 5 Breakfast Recipes'}
             article={'Rise and shine with our best-ever breakfast recipes.'} />
-        <ButtonStyled><Link to="/top">&rarr; Top 5 recipes</Link></ButtonStyled>
-        <ButtonStyled><Link to="/motivation">&rarr; Motivation</Link></ButtonStyled>
+        <ButtonStyled><Link to="/top"> Top 5 recipes</Link></ButtonStyled>
+        <ButtonStyled><Link to="/motivation">Why to Cook?</Link></ButtonStyled>
         </StyledHeader>
         <StyledDiv>
             <TopStateless

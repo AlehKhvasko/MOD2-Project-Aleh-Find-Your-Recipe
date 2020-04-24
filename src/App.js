@@ -83,17 +83,17 @@ const StyledHeader = styled.div`
 return (
       <div className='App'>
         <div className='App-header'>
+        <StyledHeader>
+            <Link to="/"> Home</Link>
+            <Link to="/top"> Top 5 recipes</Link>
+            <Link to="/motivation"> Why to cook?</Link>
+        </StyledHeader>
             <Title>Grandma's Recipe</Title>
               <SearchForm
               inputChange={onChangeHandler}
               info={someData}></SearchForm>
               {empty ? <Error error={empty}/>:null}
               <Button ClickBtn={onSubmitHandler}></Button>
-        <StyledHeader>
-            <Link to="/">&rarr; Home</Link>
-            <Link to="/top">&rarr; Top 5 recipes</Link>
-            <Link to="/motivation">&rarr; Why to cook?</Link>
-        </StyledHeader>
 
             <Grid >{mainRecipe.map((res, index) =>
                 <Block 

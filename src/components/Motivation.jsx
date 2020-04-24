@@ -19,9 +19,10 @@ const StyledHeader = styled.div`
     display: flex;
     justify-content:space-evenly;
     align-items:center;
-    background-color:#495252;
-    height:10vh;
+    background-image:url('https://i.pinimg.com/736x/81/4d/e8/814de875dcd72f4398fb42965fd11a83.jpg');
+    height:13vh;
     font-size:1.5rem;
+    border:4px solid black;
 `
 const ButtonStyled = styled.button`
     display: flex;
@@ -53,9 +54,9 @@ export default function Motivation() {
     return (
         <div>
         <StyledHeader>  
-        <ButtonStyled><Link to="/">&rarr; Home</Link></ButtonStyled>
-        <ButtonStyled><Link to="/top">&rarr; Top 5 recipes</Link></ButtonStyled>
-        <ButtonStyled><Link to="/motivation">&rarr; Motivation</Link></ButtonStyled>
+        <ButtonStyled><Link to="/">Home</Link></ButtonStyled>
+        <ButtonStyled><Link to="/top">Top 5 recipes</Link></ButtonStyled>
+        <ButtonStyled><Link to="/motivation">Why to Cook?</Link></ButtonStyled>
         </StyledHeader>  
         <StyledMain>
             <MotivationStateless
