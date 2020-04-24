@@ -91,12 +91,12 @@ const StyledHeader = styled.div`
 
 return (
       <div className='App'>
-        <div className='App-header'>
         <StyledHeader>
             <Link to="/"> Home</Link>
             <Link to="/top"> Top 5 recipes</Link>
             <Link to="/motivation"> Why to cook?</Link>
         </StyledHeader>
+        <div className='App-header'>
             <Title>Grandma's Recipe</Title>
               <SearchForm
               inputChange={onChangeHandler}
