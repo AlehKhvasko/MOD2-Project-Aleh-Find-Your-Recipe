@@ -84,7 +84,7 @@ const StyledHeader = styled.div`
     text-shadow:2px 2px 1px black;
     border:4px solid black;
     background-image:url('https://i.pinimg.com/736x/81/4d/e8/814de875dcd72f4398fb42965fd11a83.jpg'); 
-    height:10vh;
+    height:15vh;
     width:100vw;
     margin:0;
 `
