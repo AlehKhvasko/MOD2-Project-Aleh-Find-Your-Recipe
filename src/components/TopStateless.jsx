@@ -13,7 +13,6 @@ const StyledDiv = styled.div`
    box-shadow:10px 10px 4px black;
    margin:5%;
    font-size:1.4rem;
-   text-shadow:.4px .4px .1px white;
    text-align:center;
 `;   
 
@@ -22,6 +21,8 @@ const StyledDiv2 = styled.div`
    border:1px solid black;
    padding:10%;
    color:green;
+   background-image:url('https://www.ppt-backgrounds.net/thumbs/pics-photos--notebook-notebook-paper-for---clip-art-background-backgrounds.jpg');
+   box-shadow:2px 2px 1px black;
 `;
 const StyledImg = styled.img`
     border:2px solid black;
