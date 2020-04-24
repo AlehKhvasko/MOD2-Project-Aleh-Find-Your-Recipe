@@ -17,7 +17,7 @@ const NameStyled = styled.h2`
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style:cursive;
     text-align:center;
-    color: #b8d1d4;123456789123456
+    color: #b8d1d4;12345678912345
     font-style: italic;
     padding:5px;
     font-size:1.4em;
