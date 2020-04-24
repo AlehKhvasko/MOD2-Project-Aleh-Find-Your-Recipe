@@ -34,7 +34,7 @@ export default function TopStateless(props) {
         <StyledDiv>
 
             <h2>{props.article}</h2>
-            <StyledImg src={props.imgpath} alt='no img' width='500' height='500'/>
+            <StyledImg src={props.imgpath} alt='no img' width='600' height='600'/>
             <p>{props.article2}</p>
             <ul>
                 <StyledDiv2>
