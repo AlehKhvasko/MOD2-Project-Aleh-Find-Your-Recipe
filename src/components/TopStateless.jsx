@@ -14,15 +14,19 @@ const StyledDiv = styled.div`
    margin:5%;
    font-size:1.4rem;
    text-align:center;
+   font-weight:bold;
+   font-style:italic;
 `;   
 
 const StyledDiv2 = styled.div`
    list-style-type:none;
    border:1px solid black;
-   padding:10%;
+   padding:8%;
    color:green;
    background-image:url('https://www.ppt-backgrounds.net/thumbs/pics-photos--notebook-notebook-paper-for---clip-art-background-backgrounds.jpg');
    box-shadow:2px 2px 1px black;
+   font-style:italic;
+   font-weight: normal;
 `;
 const StyledImg = styled.img`
     border:2px solid black;
@@ -34,7 +38,7 @@ export default function TopStateless(props) {
         <StyledDiv>
 
             <h2>{props.article}</h2>
-            <StyledImg src={props.imgpath} alt='no img' width='600' height='600'/>
+            <StyledImg src={props.imgpath} alt='no img' width='550' height='600'/>
             <p>{props.article2}</p>
             <ul>
                 <StyledDiv2>
