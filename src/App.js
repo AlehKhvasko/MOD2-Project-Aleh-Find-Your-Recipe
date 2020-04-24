@@ -58,7 +58,6 @@ const onSubmitHandler = async(event) => {
   if(someData !== '') {
     event.preventDefault();
     const res = await axios.get(url);
-    console.log(res);
     setMainRecipe(res.data.hits)
     setSomeData('');
   }else{
