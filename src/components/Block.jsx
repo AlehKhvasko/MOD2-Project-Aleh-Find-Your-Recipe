@@ -89,7 +89,7 @@ export default function Block({info}) {
     const {label,image,url, ingredients,calories} = info.recipe;
     return (
     <BlockStyled>
-        <NameStyled>{label.length < 15 ? label : label.substring(0,15)+ '...'}</NameStyled>
+        <NameStyled>{label.length < 20 ? label : label.substring(0,20)+ '...'}</NameStyled>
         <ImageStyled 
         src={image}
          alt="#"/>
