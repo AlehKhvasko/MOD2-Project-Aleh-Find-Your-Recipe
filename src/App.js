@@ -99,6 +99,19 @@ const StyledTitle = styled.div`
   height:10vh;
   box-shadow:10px 10px 2px black;
 `
+const StyledSearch = styled.div`
+  display: flex;
+  flex-flow:column;
+  justify-content:center;
+  align-items:center;
+  background-color:rgba(0,0,0,0.4);
+  border:2px solid black;
+  margin:40px auto 100px auto;
+  width:30%;
+  height:15vh;
+  box-shadow:10px 10px 2px black;
+  padding-top:20px;
+`
 
 return (
       <div className='App'>
@@ -109,11 +122,10 @@ return (
         </StyledHeader>
         <div className='App-header'>
           <StyledTitle><Title>Grandma's Recipe</Title> </StyledTitle>
-          <StyledTitle> <SearchForm
+          <SearchForm
               inputChange={onChangeHandler}
               info={someData}></SearchForm>
               {empty ? <Error error={empty}/>:null}
-           </StyledTitle>
               <Button ClickBtn={onSubmitHandler}></Button>
             <Grid >{mainRecipe.map((res, index) =>
                 <Block 
