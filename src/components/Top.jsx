@@ -32,15 +32,41 @@ const StyledHeader = styled.div`
     text-shadow:2px 2px 1px black;
 `;
 
+const ButtonStyled = styled.button`
+    display: flex;
+    justify-content:center;
+    margin:15px auto 0px auto ;
+    height:3.3em;
+    width:12em;
+    border-radius:10px;
+    background-color:papayawhip;
+    border:.9px solid black;
+    box-shadow:4px 4px 2px black;
+    font-weight:bold;
+    font-size:1rem;
+    text-transform:uppercase;
+    transition-delay:200ms;
+
+&:hover {
+    background-color:lightyellow;
+    border:1.9px solid lightgrey;
+    transform:scale(1.2);
+    border-radius:20px;
+    border:2.9px solid orangered;
+}
+`;
+
 export default function Top() {
     return (
        <StyledMain> 
         <StyledHeader>
-        <Link to="/">Home</Link>
+        <ButtonStyled><Link to="/">&rarr; Home</Link></ButtonStyled>
+        <ButtonStyled><Link to="/motivation">&rarr; Motivation</Link></ButtonStyled>
             <TopHeader
             header={'Top 5 Breakfast Recipes'}
             article={'Rise and shine with our best-ever breakfast recipes.'} />
-        <Link to="/top">Top 5 recipes</Link>
+        <ButtonStyled><Link to="/top">&rarr; Top 5 recipes</Link></ButtonStyled>
+        <ButtonStyled><Link to="/motivation">&rarr; Motivation</Link></ButtonStyled>
         </StyledHeader>
         <StyledDiv>
             <TopStateless

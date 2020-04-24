@@ -1,14 +1,63 @@
 import React from 'react';
 import MotivationStateless from './MotivationStateless';
 import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 
+
+const StyledMain = styled.div`
+    background-color:#1c1e1e;
+    color:black;
+    font-weight:bold;
+    font-size:1.5em;
+    padding:20px;
+    text-shadow:1px 1px .5px white;
+    background-image:url('https://previews.123rf.com/images/pavelalexeev/pavelalexeev1611/pavelalexeev161100275/68960305-orange-hessian-sack-cloth-texture-abstract-background-and-texture-ideal-for-design-or-wallpaper-.jpg');
+    background-size:cover;
+
+`
+const StyledHeader = styled.div`
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color:#495252;
+    height:10vh;
+    font-size:1.5rem;
+`
+const ButtonStyled = styled.button`
+    display: flex;
+    justify-content:center;
+    margin:15px auto 0px auto ;
+    height:3.3em;
+    width:12em;
+    border-radius:10px;
+    background-color:papayawhip;
+    border:.9px solid black;
+    box-shadow:4px 4px 2px black;
+    font-weight:bold;
+    font-size:1rem;
+    text-transform:uppercase;
+    transition-delay:200ms;
+    text-decoration:none;
+&:hover {
+    background-color:lightyellow;
+    border:1.9px solid lightgrey;
+    transform:scale(1.2);
+    border-radius:20px;
+    border:2.9px solid orangered;
+   
+}
+`;
 
 
 export default function Motivation() {
     return (
         <div>
-            <Link to="/">Home</Link>
-            <Link to="/top">Top 5 recipes</Link>
+        <StyledHeader>  
+        <ButtonStyled><Link to="/">&rarr; Home</Link></ButtonStyled>
+        <ButtonStyled><Link to="/top">&rarr; Top 5 recipes</Link></ButtonStyled>
+        <ButtonStyled><Link to="/motivation">&rarr; Motivation</Link></ButtonStyled>
+        </StyledHeader>  
+        <StyledMain>
             <MotivationStateless
             main={'Why Home Cooking?'}
             header={'Kitchen Confidential: The Health and Social Benefits of Home-Cooked Meals'}
@@ -18,6 +67,7 @@ export default function Motivation() {
             article4={"As if all that weren’t enough, home-cooked meals can also benefit the environment – and all of us, by extension – by saving money and reducing our carbon footprint.6 Home cooking gives us the opportunity to choose component ingredients over processed meals, which cuts down on packaging. Buy those ingredients from local farmers or grow your own, and you’ll make an even bigger impact on the environment by significantly reducing the amount of transportation required to get food to your plate."}
             image={'https://www.fix.com/assets/content/19020/how-to-cook-more-at-home-002.jpg'}
             />
+        </StyledMain>
         </div>
     )
 }
